@@ -1,7 +1,6 @@
 from moviepy.editor import *
 
-
-videoclip = VideoFileClip("E:\Projects\Video Chunks Generator\pcgaming.mp4")
+videoclip = VideoFileClip("Enter the path to the video file.")
 duration = videoclip.duration
 interval = int(input("Enter the length of chunks in seconds :"))
 while duration < interval:
@@ -22,6 +21,6 @@ print(clips)
 
 for i in range(len(clips)):
     newclip = clips[i] 
-    newclip.write_videofile(f"clip{i}.mp4")
+    newclip.write_videofile(f"clip{i+1}.mp4")
     
 
